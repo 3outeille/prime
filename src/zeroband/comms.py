@@ -500,7 +500,7 @@ class ElasticDeviceMesh:
 
             iperf_addr = get_ip_address(IPERF_IFNAME)
             iperf_port = IPERF_PORT + self.world_info.global_rank
-            cmd: List[str] = ["iperf", "-s", "-p", str(iperf_port)]
+            cmd: List[str] = ["iperf3", "-s", "-p", str(iperf_port)]
             self.server_process = subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
             self.god_store.set(f"iperf_{self.world_info.global_unique_id}", f"{iperf_addr}:{iperf_port}")
             self._logger.info(f"Started iperf server on {iperf_addr} with port {iperf_port}")
