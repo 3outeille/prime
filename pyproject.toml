@@ -5,21 +5,18 @@ description = "ZeroBand is a production ready codebase for decentralized trainin
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "torch==2.5.1",
+    "torch==2.6.0a0+df5bbc09d1.nv24.11",
     "numpy",
     "setuptools",
     "transformers>=4.44.2",
     "datasets>=3.0.0",
     "pydantic_config @ git+https://github.com/samsja/pydantic_config.git@b7becc3",
-    "torchdata>=0.8.0",
     "fsspec[gcs]>=2024.3.1",
     "ninja",
     "zstandard",
     "pyarrow",
     "toposolve>=0.1.17",
     "psutil",
-    "torch-shampoo @ git+https://github.com/facebookresearch/optimizers.git@main",
-    "liger-kernel-nightly>=0.5.2.dev20250122195349",
 ]
 
 [project.optional-dependencies]
